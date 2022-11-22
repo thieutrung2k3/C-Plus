@@ -65,11 +65,11 @@ void sortArrayDescending(int *a, int n)
     {
         for (int j = i; j < n; j++)
         {
-            if (a[i] < a[j])
+            if (*(a + i) < *(a + j))
             {
-                int m = a[i];
-                a[i] = a[j];
-                a[j] = m;
+                int m = *(a + i);
+                *(a + i) = *(a + j);
+                *(a + j) = m;
             }
         }
     }
@@ -81,11 +81,11 @@ void sortArrayAscending(int *a, int n)
     {
         for (int j = i; j < n; j++)
         {
-            if (a[i] > a[j])
+            if (*(a + i) > *(a + j))
             {
-                int m = a[i];
-                a[i] = a[j];
-                a[j] = m;
+                int m = *(a + i);
+                *(a + i) = *(a + j);
+                *(a + j) = m;
             }
         }
     }
